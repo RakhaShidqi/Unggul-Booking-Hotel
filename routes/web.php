@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -20,6 +21,33 @@ Route::post('/admin/login', [LoginController::class, 'login'])->name('admin-logi
 Route::get('/register/admin', [RegisterController::class, 'showAdminForm'])->name('admin-register');
 Route::post('/register/admin', [RegisterController::class, 'registerAdmin'])->name(name:'admin-register.store');
 
+Route::get('admin/orders', function () {
+    return view('admin.orders'); // pastikan ada file resources/views/profile.blade.php
+})->name('admin-orders');
+
+Route::get('/admin/properties', [HotelController::class, 'getAllData'])->name('admin-properties');;
+
+Route::get('admin/agents', function () {
+    return view('admin.admin_agents'); // pastikan ada file resources/views/profile.blade.php
+})->name('admin-agents');
+
+Route::get('admin/location', function () {
+    return view('admin.location'); // pastikan ada file resources/views/profile.blade.php
+})->name('admin-location');
+
+Route::get('admin/website-setting', function () {
+    return view('admin.website_setting'); // pastikan ada file resources/views/profile.blade.php
+})->name('admin-website-setting');
+
+Route::get('/admin/sidebar', function () {
+    return view('admin.sidebar.sidebar-main'); // pastikan ada file resources/views/profile.blade.php
+})->name('admin-sidebar');
+
+Route::get('/admin/website-setting', function () {
+    return view('admin.website_setting'); // pastikan ada file resources/views/profile.blade.php
+})->name('admin-website-setting');
+
+
 
 // Customer View
 Route::get('/register/customer', [RegisterController::class, 'showCustomerForm'])->name('customer-register');
@@ -33,6 +61,9 @@ Route::post('/customer/login', [LoginController::class, 'login'])->name('custome
 Route::get('/agent/dashboard', function () {
     return view('agents.agent_dashboard'); // pastikan ada file resources/views/profile.blade.php
 })->name('agent-dashboard');
+Route::get('admin/agent/dashboard/data', [HotelController::class, 'getAllData']);
+Route::resource('admin/agent/dashboard', HotelController::class);
+
 
 Route::get('/register/agent', [RegisterController::class, 'showAgentForm'])->name('agent-register');
 Route::post('/register/agent', [RegisterController::class, 'registerAgent']);
@@ -41,17 +72,15 @@ Route::get('/agent/login', [LoginController::class, 'showAgentLoginForm'])->name
 Route::post('/agent/login', [LoginController::class, 'login'])->name('agent-login.post');
 
 
-
-
-
-
-
-
-
 // Main View
 Route::get('/', function () {
     return view('main.index');
 })->name('index');
+
+// Main View
+Route::get('/sidebar', function () {
+    return view('layouts.sidebar');
+})->name('sidebar');
 
 Route::get('/forgot-password', function () {
     return view('password.forget_password');
@@ -92,10 +121,6 @@ Route::get('/layanan', function () {
 Route::get('/properties', function () {
     return view('main.properties'); // pastikan ada file resources/views/profile.blade.php
 })->name('properties');
-
-Route::get('admin/properties', function () {
-    return view('admin.admin_properties'); // pastikan ada file resources/views/profile.blade.php
-})->name('admin-properties');
 
 Route::get('admin/location', function () {
     return view('admin.location'); // pastikan ada file resources/views/profile.blade.php

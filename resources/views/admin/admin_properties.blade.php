@@ -1,216 +1,15 @@
 <?php
 // admin_properties.php
 // Dummy data for demonstration (replace with DB in production)
-$hotels = [
-    [
-        'id' => 1,
-        'name' => 'Hotel Santika Prime',
-        'location' => 'Harapan Indah Bekasi',
-        'price' => 688750,
-        'image' => 'hotelsantika.jpg',
-        'rating' => 4.5,
-        'facilities' => ['Free Wi-Fi', 'Swimming Pool', 'Fitness Center', 'Restaurant'],
-        'rooms' => [
-            ['type' => 'Standard', 'count' => 5, 'available' => 4, 'occupied' => 1],
-            ['type' => 'Deluxe', 'count' => 2, 'available' => 2, 'occupied' => 0],
-        ],
-        'room_images' => [
-            'santika-room1.jpg',
-            'santika-room2.jpg',
-            'santika-room3.jpg',
-            'santika-room4.jpg',
-        ]
-    ],
-    [
-        'id' => 2,
-        'name' => 'Hotel Royal Ambarukmo',
-        'location' => 'Jogjakarta',
-        'price' => 1588755,
-        'image' => 'royal-ambarukmo.jpg',
-        'rating' => 4.8,
-        'facilities' => ['Free Wi-Fi', 'Spa', 'Restaurant', 'Meeting Rooms'],
-        'rooms' => [
-            ['type' => 'Suite', 'count' => 2, 'available' => 2, 'occupied' => 0],
-            ['type' => 'Deluxe', 'count' => 3, 'available' => 2, 'occupied' => 1],
-        ],
-        'room_images' => [
-            'royal-room1.jpg',
-            'royal-room2.jpg',
-            'royal-room3.jpg',
-            'royal-room4.jpg',
-        ]
-    ],
-    [
-        'id' => 3,
-        'name' => 'Hotel Novotel',
-        'location' => 'Bandung',
-        'price' => 853801,
-        'image' => 'hotelnovotel.jpg',
-        'rating' => 4.6,
-        'facilities' => ['Free Wi-Fi', 'Indoor & Outdoor Pool', 'Fitness Center', 'Spa', 'Rooftop Bar', 'Business Center'],
-        'rooms' => [
-            ['type' => 'Standard', 'count' => 8, 'available' => 7, 'occupied' => 1],
-            ['type' => 'Suite', 'count' => 2, 'available' => 1, 'occupied' => 1],
-        ],
-        'room_images' => [
-            'novotel-room1.jpg',
-            'novotel-room2.jpg',
-            'novotel-room3.jpg',
-            'novotel-room4.jpg',
-        ]
-    ],
-    [
-        'id' => 4,
-        'name' => 'Spencer Green Hotel',
-        'location' => 'Malang, Batu',
-        'price' => 403603,
-        'image' => 'spencer_green_hotel.jpg',
-        'rating' => 4.2,
-        'facilities' => ['Free Wi-Fi', 'Swimming Pool', 'Restaurant', 'Meeting Rooms'],
-        'rooms' => [
-            ['type' => 'Standard', 'count' => 5, 'available' => 4, 'occupied' => 1],
-            ['type' => 'Deluxe', 'count' => 1, 'available' => 1, 'occupied' => 0],
-        ],
-        'room_images' => [
-            'spencer_green_hotel.jpg',
-        ]
-    ],
-    [
-        'id' => 5,
-        'name' => 'Hotel Trikora Beach',
-        'location' => 'Bintan Regency, Riau',
-        'price' => 900000,
-        'image' => 'hoteltrikorabeach.jpg',
-        'rating' => 4.0,
-        'facilities' => ['Free Wi-Fi', 'Beachfront', 'Spa', 'Restaurant'],
-        'rooms' => [
-            ['type' => 'Standard', 'count' => 4, 'available' => 3, 'occupied' => 1],
-            ['type' => 'Suite', 'count' => 1, 'available' => 1, 'occupied' => 0],
-        ],
-        'room_images' => [
-            'hoteltrikorabeach.jpg',
-        ]
-    ],
-    [
-        'id' => 6,
-        'name' => 'Hotel Continental',
-        'location' => 'Badung, Bali',
-        'price' => 850000,
-        'image' => 'hotelcontinental.jpg',
-        'rating' => 4.3,
-        'facilities' => ['Free Wi-Fi', 'Swimming Pool', 'Restaurant', 'Bar'],
-        'rooms' => [
-            ['type' => 'Standard', 'count' => 12, 'available' => 11, 'occupied' => 1],
-            ['type' => 'Deluxe', 'count' => 5, 'available' => 5, 'occupied' => 0],
-        ],
-        'room_images' => [
-            'hotelcontinental.jpg',
-        ]
-    ],
-    [
-        'id' => 7,
-        'name' => 'Hotel Raffles',
-        'location' => 'Jakarta',
-        'price' => 4700000,
-        'image' => 'raffles.jpg',
-        'rating' => 4.8,
-        'facilities' => ['Free Wi-Fi', 'Luxury Spa', 'Fine Dining', 'Butler Service', 'Swimming Pool', 'Fitness Center'],
-        'rooms' => [
-            ['type' => 'Suite', 'count' => 3, 'available' => 2, 'occupied' => 1],
-            ['type' => 'Presidential Suite', 'count' => 1, 'available' => 1, 'occupied' => 0],
-        ],
-        'room_images' => [
-            'raffles.jpg',
-        ]
-    ],
-    [
-        'id' => 8,
-        'name' => 'The Ritz-Carlton Jakarta',
-        'location' => 'Jakarta',
-        'price' => 8000000,
-        'image' => 'ritz-carlton.jpg',
-        'rating' => 4.9,
-        'facilities' => ['Free Wi-Fi', 'Luxury Spa', 'Multiple Restaurants', 'Rooftop Bar', 'Swimming Pool', 'Fitness Center', 'Business Center'],
-        'rooms' => [
-            ['type' => 'Deluxe', 'count' => 8, 'available' => 6, 'occupied' => 2],
-            ['type' => 'Suite', 'count' => 4, 'available' => 3, 'occupied' => 1],
-            ['type' => 'Presidential Suite', 'count' => 1, 'available' => 1, 'occupied' => 0],
-        ],
-        'room_images' => [
-            'ritz-carlton.jpg',
-        ]
-    ],
-    [
-        'id' => 9,
-        'name' => 'Hotel Kempinski',
-        'location' => 'Jakarta',
-        'price' => 3500000,
-        'image' => 'kempinski.jpg',
-        'rating' => 4.7,
-        'facilities' => ['Free Wi-Fi', 'Luxury Spa', 'Fine Dining', 'Swimming Pool', 'Fitness Center', 'Business Center'],
-        'rooms' => [
-            ['type' => 'Deluxe', 'count' => 10, 'available' => 8, 'occupied' => 2],
-            ['type' => 'Suite', 'count' => 3, 'available' => 2, 'occupied' => 1],
-        ],
-        'room_images' => [
-            'kempinski.jpg',
-        ]
-    ],
-    [
-        'id' => 10,
-        'name' => 'Fairfield Hotel',
-        'location' => 'Jakarta',
-        'price' => 1200000,
-        'image' => 'fairfield.jpg',
-        'rating' => 4.4,
-        'facilities' => ['Free Wi-Fi', 'Swimming Pool', 'Restaurant', 'Fitness Center', 'Business Center'],
-        'rooms' => [
-            ['type' => 'Standard', 'count' => 15, 'available' => 12, 'occupied' => 3],
-            ['type' => 'Deluxe', 'count' => 5, 'available' => 4, 'occupied' => 1],
-        ],
-        'room_images' => [
-            'fairfield.jpg',
-        ]
-    ],
-    // Add more hotels as needed
-];
+?> 
 
-// Handle add/edit room (dummy, not persistent)
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // In production, update DB here
-    $msg = 'Fitur tambah/edit kamar hanya demo (tidak tersimpan permanen).';
-}
-
-$hotel_labels = [];
-$hotel_room_counts = [];
-$hotel_available_counts = [];
-$hotel_occupied_counts = [];
-$total_available = 0;
-$total_occupied = 0;
-foreach ($hotels as $hotel) {
-    $hotel_labels[] = $hotel['name'];
-    $total_rooms = 0;
-    $available = 0;
-    $occupied = 0;
-    foreach ($hotel['rooms'] as $room) {
-        $total_rooms += $room['count'];
-        $available += $room['available'];
-        $occupied += $room['occupied'];
-    }
-    $hotel_room_counts[] = $total_rooms;
-    $hotel_available_counts[] = $available;
-    $hotel_occupied_counts[] = $occupied;
-    $total_available += $available;
-    $total_occupied += $occupied;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Property Management</title>
-    <link rel="stylesheet" href="admin_properties.css">
+    <link rel="stylesheet" href="/assets/css/admin_properties.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -235,35 +34,55 @@ foreach ($hotels as $hotel) {
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($hotels as $hotel): ?>
-                <tr>
-                    <td><img src="images/<?php echo $hotel['image']; ?>" alt="<?php echo $hotel['name']; ?>" class="hotel-thumb"></td>
-                    <td><?php echo $hotel['name']; ?></td>
-                    <td><?php echo $hotel['location']; ?></td>
-                    <td>Rp. <?php echo number_format($hotel['price'], 0, ',', '.'); ?></td>
-                    <td><?php echo $hotel['rating']; ?></td>
-                    <td>
-                        <ul>
-                        <?php foreach ($hotel['facilities'] as $f): ?>
-                            <li><?php echo $f; ?></li>
+                <?php if (!empty($hotels)): ?>
+                        <?php foreach ($hotels as $hotel): ?>
+                            <tr>
+                                <td>
+                                    <img src="images/<?php echo htmlspecialchars($hotel['image']); ?>" alt="<?php echo htmlspecialchars($hotel['name']); ?>" class="hotel-thumb">
+                                </td>
+                                <td><?php echo htmlspecialchars($hotel['name']); ?></td>
+                                <td><?php echo htmlspecialchars($hotel['location']); ?></td>
+                                <td>Rp. <?php echo number_format($hotel['price'] ?? 0, 0, ',', '.'); ?></td>
+                                <td><?php echo htmlspecialchars($hotel['rating']); ?></td>
+                                <td>
+                                    <ul>
+                                        <?php if (!empty($hotel['facilities']) && is_array($hotel['facilities'])): ?>
+                                            <?php foreach ($hotel['facilities'] as $f): ?>
+                                                <li><?php echo htmlspecialchars($f); ?></li>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <li>Tidak ada fasilitas</li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <?php if (!empty($hotel['rooms']) && is_array($hotel['rooms'])): ?>
+                                            <?php foreach ($hotel['rooms'] as $idx => $room): ?>
+                                                <li>
+                                                    <?php echo htmlspecialchars($room['type']) . ': ' . htmlspecialchars($room['count']); ?>
+                                                    <button class="edit-btn" style="margin-left:8px;padding:2px 10px;font-size:0.9em;"
+                                                        onclick="showEditForm('<?php echo $hotel['id']; ?>', <?php echo $idx; ?>, '<?php echo htmlspecialchars($room['type'], ENT_QUOTES); ?>', <?php echo $room['count']; ?>)">
+                                                        <i class="fa fa-edit"></i> Edit
+                                                    </button>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <li>Tidak ada kamar</li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button class="add-btn" onclick="showAddRoomForm('<?php echo $hotel['id']; ?>')">
+                                        <i class="fa fa-plus"></i> Add Room
+                                    </button>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                        <?php foreach ($hotel['rooms'] as $idx => $room): ?>
-                            <li>
-                                <?php echo $room['type'] . ': ' . $room['count']; ?>
-                                <button class="edit-btn" style="margin-left:8px;padding:2px 10px;font-size:0.9em;" onclick="showEditForm(<?php echo $hotel['id']; ?>, <?php echo $idx; ?>, '<?php echo htmlspecialchars($room['type'], ENT_QUOTES); ?>', <?php echo $room['count']; ?>)"><i class="fa fa-edit"></i> Edit</button>
-                            </li>
-                        <?php endforeach; ?>
-                        </ul>
-                    </td>
-                    <td>
-                        <button class="add-btn" onclick="showAddRoomForm(<?php echo $hotel['id']; ?>)"><i class="fa fa-plus"></i> Add Room</button>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr><td colspan="8">Data hotel belum tersedia.</td></tr>
+                    <?php endif; ?>
+
             </tbody>
         </table>
 
@@ -324,7 +143,7 @@ foreach ($hotels as $hotel) {
     const roomsStatusChart = new Chart(ctxStatus, {
         type: 'bar',
         data: {
-            labels: <?php echo json_encode($hotel_labels); ?>,
+            labels: <?php echo json_encode($hotel_labels); ?>
             datasets: [
                 {
                     label: 'Tersedia',
